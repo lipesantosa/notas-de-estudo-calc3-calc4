@@ -1,0 +1,46 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage[portuguese]{babel}
+\usepackage{graphicx, setspace, indentfirst}
+\usepackage{amsmath}
+\onehalfspace
+
+\title{Notas de Estudo em Cálculo 3 e 4}
+\author{Felipe Santos Araujo}
+\date{June 2024}
+
+\begin{document}
+
+\maketitle
+
+\newpage
+\tableofcontents{}
+
+\newpage
+\section{Funções Vetoriais}
+\subsection{Funções Vetoriais e Curvas Vetoriais}
+    \newtheorem{definition}{Definição}
+    Funções Vetoriais são funções que ao invés de lidarem com valores reais, lidam com vetores para descreverem curvas e superfícies no espaço.
+        \begin{definition}
+            Para todo número real \textit{t} existe um único vetor de $V_3$ denotado por $r(t)$. Seja $f(t)$, $g(t)$, $h(t)$ as componentes do vetor $r(t)$, então $f$, $g$ e $h$ são chamadas funções componentes de $r$ e podemos escrever:
+            \[r(t) = \left<f(t), g(t), h(t) \right> = f(t)\hat{i} + g(t)\hat{j} + h(t)\hat{k}\]
+        \end{definition}
+    Importante notar que o domínio dessa função $r$ é constituído por todos os valores de $t$ para os quais a expressão $r(t)$ está definida.\\
+
+    O limite da função $r(t)$ pode ser definido como,
+    \[\lim_{t \to a} r(t) = \left<\lim_{t \to a}f(t), \lim_{t \to a}g(t), \lim_{t \to a}h(t) \right>\]
+    desde que $f$, $g$ e $h$ tenham limites existentes.\\
+    \textbf{Exemplo 1} - Calcule
+    \[\lim_{t \to 0} (e^{(-3t)}\hat{i} + \frac{t^2}{\sin^2{(t)}}\hat{j} + \cos{(2t)}\hat{k})\]
+    Note que,
+     \[\lim_{t \to 0} (e^{(-3t)}\hat{i} + \frac{t^2}{\sin^2{(t)}}\hat{j} + \cos{(2t)}\hat{k})\]
+     \[= [\lim_{t \to 0}e^{(-3t)}]\hat{i} + [\lim_{t \to 0}\frac{t^2}{\sin^2{(t)}}]\hat{j} + [\lim_{t \to 0}\cos{(2t)}]\hat{k}\]
+     \[= \hat{i} + \hat{j} + \hat{k}\]
+\newpage
+\subsection{Derivadas e Integrais de Funções Vetoriais}
+    \newtheorem{definition}{Definição}
+        \begin{definition}
+            A derivada de uma função vetorial $r$ é definida do mesmo modo como é feito para as funções de valores reais:
+            \[\dfrac{dr}{dt} = r'(t) = \lim_{h \to 0} \frac{r(t + h) - r(t)}{h}\]
+        \end{definition}
+
+\end{document}
