@@ -24,6 +24,8 @@
             Para todo número real \textit{t} existe um único vetor de $V_3$ denotado por $r(t)$. Seja $f(t)$, $g(t)$, $h(t)$ as componentes do vetor $r(t)$, então $f$, $g$ e $h$ são chamadas funções componentes de $r$ e podemos escrever:
             \[r(t) = \left<f(t), g(t), h(t) \right> = f(t)\hat{i} + g(t)\hat{j} + h(t)\hat{k}\]
         \end{definition}
+    Note que a partir dessa definição podemos definir a parametrização de funções vetoriais como:
+    \[x = f(t);     y = g(t);   z = h(t)\]
     Importante notar que o domínio dessa função $r$ é constituído por todos os valores de $t$ para os quais a expressão $r(t)$ está definida.\\
 
     O limite da função $r(t)$ pode ser definido como,
@@ -32,15 +34,30 @@
     \textbf{Exemplo 1} - Calcule
     \[\lim_{t \to 0} (e^{(-3t)}\hat{i} + \frac{t^2}{\sin^2{(t)}}\hat{j} + \cos{(2t)}\hat{k})\]
     Note que,
-     \[\lim_{t \to 0} (e^{(-3t)}\hat{i} + \frac{t^2}{\sin^2{(t)}}\hat{j} + \cos{(2t)}\hat{k})\]
+     \[\lim_{t \to 0} (e^{(-3t)}\hat{i} + \dfrac{t^2}{\sin^2{(t)}}\hat{j} + \cos{(2t)}\hat{k})\]
      \[= [\lim_{t \to 0}e^{(-3t)}]\hat{i} + [\lim_{t \to 0}\frac{t^2}{\sin^2{(t)}}]\hat{j} + [\lim_{t \to 0}\cos{(2t)}]\hat{k}\]
      \[= \hat{i} + \hat{j} + \hat{k}\]
 \newpage
 \subsection{Derivadas e Integrais de Funções Vetoriais}
-    \newtheorem{definition}{Definição}
-        \begin{definition}
-            A derivada de uma função vetorial $r$ é definida do mesmo modo como é feito para as funções de valores reais:
-            \[\dfrac{dr}{dt} = r'(t) = \lim_{h \to 0} \frac{r(t + h) - r(t)}{h}\]
-        \end{definition}
+    \subsubsection{Derivdas de Funções Vetoriais}
+        \newtheorem{definition}{Definição}
+            \begin{definition}
+                A derivada de uma função vetorial $r$ é definida do mesmo modo como é feito para as funções de valores reais:
+                \[\dfrac{dr}{dt} = r'(t) = \lim_{h \to 0} \frac{r(t + h) - r(t)}{h}\]
+            \end{definition}
+        \newtheorem{theorem}{Teorema}
+            \begin{theorem}
+                Seja \[r(t) = \left<f(t), g(t), h(t)\right> = f(t)\hat{i} + g(t)\hat{j} + h(t)\hat{k}\]
+                Então, \[r'(t) = \left<f'(t), g'(t), h'(t)\right> = f'(t)\hat{i} + g'(t)\hat{j} + h'(t)\hat{k}\]
+                Demonstração:
+                \[r'(t) = \lim_{t \to 0} \frac{1}{\Delta t}[r(t + \Delta t) - r(t)]\]
+                \[ = \lim_{t \to 0} \frac{1}{\Delta t}[\left<f(t + \Delta t), g(t + \Delta t), h(t + \Delta t)\right> - \left<f(t), g(t), h(t)\right>]\]
+                \[ = \lim_{t \to 0} \left< \dfrac{f(t + \Delta t) - f(t))}{\Delta t}, \dfrac{g(t + \Delta t) - g(t))}{\Delta t}, \dfrac{h(t + \Delta t) - h(t))}{\Delta t}\right>\]
+                \[ = \left< \lim_{t \to 0} \dfrac{f(t + \Delta t) - f(t))}{\Delta t}, \lim_{t \to 0} \dfrac{g(t + \Delta t) - g(t))}{\Delta t}, \lim_{t \to 0} \dfrac{h(t + \Delta t) - h(t))}{\Delta t}\right>\]
+                \[= \left<f'(t), g'(t), h'(t)\right>\]
+            \end{theorem}
+    Observação: Todas as formas de derivação vistas para funções de valores reais servem também para funções vetoriais.
+\newpage
+    \subsubsection{Integral de Funções Vetoriais}
 
 \end{document}
